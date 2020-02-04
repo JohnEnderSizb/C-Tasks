@@ -1,0 +1,11 @@
+/home/ender/Desktop/PartialReload/C#Tasks/bin/Debug/netcoreapp3.1/C#Tasks
+/home/ender/Desktop/PartialReload/C#Tasks/bin/Debug/netcoreapp3.1/C#Tasks.deps.json
+/home/ender/Desktop/PartialReload/C#Tasks/bin/Debug/netcoreapp3.1/C#Tasks.runtimeconfig.json
+/home/ender/Desktop/PartialReload/C#Tasks/bin/Debug/netcoreapp3.1/C#Tasks.runtimeconfig.dev.json
+/home/ender/Desktop/PartialReload/C#Tasks/bin/Debug/netcoreapp3.1/C#Tasks.dll
+/home/ender/Desktop/PartialReload/C#Tasks/bin/Debug/netcoreapp3.1/C#Tasks.pdb
+/home/ender/Desktop/PartialReload/C#Tasks/obj/Debug/netcoreapp3.1/C#Tasks.csprojAssemblyReference.cache
+/home/ender/Desktop/PartialReload/C#Tasks/obj/Debug/netcoreapp3.1/C#Tasks.AssemblyInfoInputs.cache
+/home/ender/Desktop/PartialReload/C#Tasks/obj/Debug/netcoreapp3.1/C#Tasks.AssemblyInfo.cs
+/home/ender/Desktop/PartialReload/C#Tasks/obj/Debug/netcoreapp3.1/C#Tasks.dll
+/home/ender/Desktop/PartialReload/C#Tasks/obj/Debug/netcoreapp3.1/C#Tasks.pdb

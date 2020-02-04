@@ -1,18 +1,21 @@
 using System;
 using System.Threading.Tasks;
+using System.Threading;
 
 public class Example
 {
    public static async Task Main()
    {
+
       await Task.Run( () => {
-                                  // Just loop.
-                                  int ctr = 0;
-                                  for (ctr = 0; ctr <= 1000000; ctr++)
-                                  {}
-                                  Console.WriteLine("Finished {0} loop iterations",
-                                                    ctr);
-                               } );
+        // Just loop.
+        int ctr = 0;
+        for (ctr = 0; ctr <= 1000000; ctr++){
+          Console.WriteLine("Hit!");
+        }
+        Thread.Sleep(2000);
+        Console.WriteLine("Finished {0} loop iterations",ctr);
+     } );
    }
 }
 // The example displays the following output:
