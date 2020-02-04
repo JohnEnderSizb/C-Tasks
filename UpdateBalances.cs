@@ -12,10 +12,12 @@ class UpdateBalances {
 
 		//read contents of accountbalances.txt file and send make http het request for account update for each line
         string[] lines = File.ReadAllLines("accountbalances.txt");
+        Task[] tasks = new Task[lines.Length];
+        int i = 0;
         foreach (string line in lines)
         {
 
-        	Task.Run( () =>  {
+        	tasks[i] = Task.Run( () =>  {
 	        	String[] strlist = line.Split(',');
 
 	            String accountName = strlist[1];
@@ -33,10 +35,21 @@ class UpdateBalances {
 	            HttpWebRequest getRequest = (HttpWebRequest) WebRequest.Create(url);
 	            HttpWebResponse response = (HttpWebResponse) getRequest.GetResponse();
 	            Stream resStream = response.GetResponseStream();
-	            Console.WriteLine(response.StatusDescription);
+	            Console.WriteLine(i+1 + ". (" + accountName + "): " + response.StatusDescription);
 		        	
 		        	}
 		    	);
+        	i++;
         }//foreach
+
+		try {
+	         Task.WaitAll(tasks);
+	      }
+	      catch (AggregateException ae) {
+	         Console.WriteLine("One or more exceptions occurred: ");
+	         foreach (var ex in ae.Flatten().InnerExceptions)
+	            Console.WriteLine("   {0}", ex.Message);
+	      }   
+
 	}//update
 }
