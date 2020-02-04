@@ -10,9 +10,9 @@ class Program
     {
         // Wait on a single task with no timeout specified.
         Task taskA = Task.Run( () =>  {
-        	//DownloadFileFromFTP downloadObject = mew DownloadFileFromFTP();
-        	DownloadFileFromFTP.download();
         	
+        	//DownloadFileFromFTP.download();
+        	UpdateBalances.update();
         	}
     	);
 
